@@ -1,0 +1,13 @@
+.form {
+  padding: 3rem;
+  display: flex;
+  margin: auto;
+}
+
+.radio {
+  margin-top: 1rem;
+}
+
+.radioLabel {
+  margin-left: 1rem;
+}
