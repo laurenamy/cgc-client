@@ -19,7 +19,7 @@ const FundCard = ({fund}) => {
   const { account } = useMetaMask()
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
-  const [contribution, setContribution] = useState(.5)
+  const [contribution, setContribution] = useState(.1)
   const [loading, setLoading] = useState(false)
   const [currentContribution, setCurrentContribution] = useState('')
   const [active, setActive] = useState(true)
@@ -69,8 +69,8 @@ const FundCard = ({fund}) => {
               <input 
                 type="number"
                 name="contribution"
-                min=".5"
-                step=".5"
+                min=".1"
+                step=".1"
                 value={contribution}
                 onChange={e => setContribution(e.target.value)}
                 required
