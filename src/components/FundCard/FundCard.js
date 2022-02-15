@@ -19,7 +19,7 @@ const FundCard = ({fund}) => {
   const { account } = useMetaMask()
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
-  const [contribution, setContribution] = useState(.0001)
+  const [contribution, setContribution] = useState(.1)
   const [loading, setLoading] = useState(false)
   const [currentContribution, setCurrentContribution] = useState('')
   const [active, setActive] = useState(true)
@@ -69,8 +69,8 @@ const FundCard = ({fund}) => {
               <input 
                 type="number"
                 name="contribution"
-                min=".0001"
-                step=".0001"
+                min=".1"
+                step=".1"
                 value={contribution}
                 onChange={e => setContribution(e.target.value)}
                 required
@@ -91,8 +91,8 @@ const FundCard = ({fund}) => {
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem>Target date: {getDateString(+fund.end)}</ListGroupItem>
-          <ListGroupItem>Current funding: {currentContribution} ETH</ListGroupItem>
-          <ListGroupItem>Funding goal: {web3.utils.fromWei(fund.target, 'ether')} ETH</ListGroupItem>
+          <ListGroupItem>Current funding: {currentContribution} MATIC</ListGroupItem>
+          <ListGroupItem>Funding goal: {web3.utils.fromWei(fund.target, 'ether')} MATIC</ListGroupItem>
         </ListGroup>
         <Card.Footer>
           Created by: <Badge bg="primary">{truncateEthAddress(fund.owner)}</Badge>
