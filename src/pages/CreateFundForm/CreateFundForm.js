@@ -18,7 +18,7 @@ const CreateFundForm = () => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [end, setEnd] = useState(new Date().setDate(new Date().getDate() + 7))
-  const [target, setTarget] = useState(.001)
+  const [target, setTarget] = useState(.5)
   const [donationRecipient, setDonationReceipient] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -101,13 +101,13 @@ const CreateFundForm = () => {
           </label>
           <br />
           <label>
-            Target (in eth):
+            Target (in MATIC):
             <br />
             <input 
               type="number"
               name="target"
-              min=".001"
-              step=".0001"
+              min=".5"
+              step=".5"
               value={target}
               onChange={e => setTarget(e.target.value)}
               required
